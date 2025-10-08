@@ -1,12 +1,12 @@
 import React from 'react';
-import { ArrowRight, Building2, CheckCircle } from 'lucide-react';
+import { ArrowRight, Building2, CheckCircle, Landmark } from 'lucide-react';
 
 export default function CTACompareBanks() {
   const banks = [
-    { name: 'Česká spořitelna', logo: '🏦' },
-    { name: 'ČSOB', logo: '🏦' },
-    { name: 'Komerční banka', logo: '🏦' },
-    { name: 'Raiffeisenbank', logo: '🏦' },
+    { name: 'Česká spořitelna' },
+    { name: 'ČSOB' },
+    { name: 'Komerční banka' },
+    { name: 'Raiffeisenbank' },
   ];
 
   return (
@@ -31,7 +31,7 @@ export default function CTACompareBanks() {
               key={index}
               className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm"
             >
-              <span className="text-2xl">{bank.logo}</span>
+              <Landmark className="text-primary" size={20} />
               <span className="text-sm font-medium text-text-secondary hidden sm:inline">
                 {bank.name}
               </span>

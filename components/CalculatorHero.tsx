@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Shield, TrendingUp, Clock } from 'lucide-react';
+import { Home, Shield, TrendingUp, Clock, Lightbulb } from 'lucide-react';
 import CalculatorForm from './CalculatorForm';
 import ResultSummary from './ResultSummary';
 import { calculateMortgage, MortgageInputs, MortgageResults, getReferenceInterestRate } from '@/lib/mortgageCalc';
@@ -71,10 +71,13 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
 
         {/* Quick Info */}
         <div className="mt-8 text-center">
-          <p className="text-sm text-text-secondary">
-            💡 <strong>Tip:</strong> Průměrná úroková sazba hypotéky v ČR je aktuálně okolo {referenceRate}%.
-            {cityName && ` Pro ${cityName} platí standardní podmínky českých bank.`}
-          </p>
+          <div className="inline-flex items-center gap-2 text-sm text-text-secondary bg-primary-50 px-4 py-3 rounded-lg">
+            <Lightbulb className="text-primary flex-shrink-0" size={18} />
+            <p>
+              <strong>Tip:</strong> Průměrná úroková sazba hypotéky v ČR je aktuálně okolo {referenceRate}%.
+              {cityName && ` Pro ${cityName} platí standardní podmínky českých bank.`}
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -15,7 +15,7 @@ interface CityPageProps {
 
 export default function CityPage({ city, otherCities, referenceRate }: CityPageProps) {
   const title = `Hypoteční kalkulačka ${city.name} 2025 – Spočítejte měsíční splátku`;
-  const description = `Použijte naší hypoteční kalkulačku pro ${city.name}. Spočítejte si měsíční splátku hypotéky, celkové náklady a porovnejte nabídky bank. Aktuální sazby ${referenceRate}% ✓ Zdarma ✓ Bez registrace`;
+  const description = `Použijte naší hypoteční kalkulačku pro ${city.name}. Spočítejte si měsíční splátku hypotéky, celkové náklady a porovnejte nabídky bank. Aktuální sazby ${referenceRate}%. Zdarma a bez registrace.`;
 
   return (
     <>
@@ -89,7 +89,7 @@ export default function CityPage({ city, otherCities, referenceRate }: CityPageP
               <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
                 <span>© 2025 Hypoteční kalkulačka</span>
                 <span>•</span>
-                <span>Vytvořeno s ❤️ pro český trh</span>
+                <span>Vytvořeno pro český trh</span>
               </div>
             </div>
           </div>
