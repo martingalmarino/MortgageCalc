@@ -67,17 +67,23 @@ export default function Home({ referenceRate }: HomeProps) {
         <CalculatorHero defaultRate={referenceRate} />
 
         {/* CTA Compare Banks */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <CTACompareBanks />
+        <div className="bg-white py-12">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <CTACompareBanks />
+          </div>
         </div>
 
         {/* All Cities for SEO */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <CityPills cities={citiesCZ} />
+        <div className="bg-neutral-100 py-12">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <CityPills cities={citiesCZ} />
+          </div>
         </div>
 
         {/* FAQ Section */}
-        <FAQAccordion />
+        <div className="bg-white">
+          <FAQAccordion />
+        </div>
 
         {/* Footer */}
         <footer className="bg-neutral-50 border-t border-neutral-300 py-8 mt-16">

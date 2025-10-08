@@ -67,7 +67,7 @@ export default function FAQAccordion({ cityName }: FAQAccordionProps) {
       />
 
       {/* FAQ Section */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <div className="inline-flex p-3 bg-primary-light rounded-full mb-4">

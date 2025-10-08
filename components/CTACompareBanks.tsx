@@ -16,9 +16,9 @@ export default function CTACompareBanks() {
   ];
 
   return (
-    <div className="my-12 bg-neutral-100 border border-neutral-300 rounded-xl p-8 md:p-10 shadow-sm">
+    <div className="bg-gradient-to-br from-primary-light/30 to-accent/10 border border-primary/20 rounded-2xl p-8 md:p-10 shadow-sm">
       <div className="max-w-3xl mx-auto text-center">
-        <div className="inline-flex p-3 bg-white rounded-full mb-6 shadow-sm">
+        <div className="inline-flex p-3 bg-white/80 backdrop-blur-sm rounded-full mb-6 shadow-sm">
           <Building2 className="text-primary" size={32} />
         </div>
         

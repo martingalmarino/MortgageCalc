@@ -10,10 +10,12 @@ interface CityPillsProps {
 
 export default function CityPills({ cities, currentCity }: CityPillsProps) {
   return (
-    <div className="my-10">
-      <div className="flex items-center gap-2 mb-4">
-        <MapPin className="text-primary" size={20} />
-        <h3 className="text-lg font-semibold text-neutral-800">
+    <div>
+      <div className="flex items-center gap-2 mb-6">
+        <div className="p-2 bg-primary-light rounded-lg">
+          <MapPin className="text-primary" size={20} />
+        </div>
+        <h3 className="text-xl font-semibold text-neutral-800">
           Hypoteční kalkulačka pro další města
         </h3>
       </div>
@@ -23,7 +25,7 @@ export default function CityPills({ cities, currentCity }: CityPillsProps) {
           <Link
             key={city.slug}
             href={`/cz/hypotecni-kalkulacka/${city.slug}`}
-            className="inline-flex items-center px-4 py-2 bg-neutral-100 hover:bg-primary-light hover:text-primary border border-neutral-300 rounded-full text-sm font-medium text-neutral-800 transition-all duration-200 shadow-sm hover:shadow"
+            className="inline-flex items-center px-4 py-2 bg-white hover:bg-primary-light hover:text-primary border border-neutral-300 hover:border-primary/30 rounded-full text-sm font-medium text-neutral-800 transition-all duration-200 shadow-sm hover:shadow"
           >
             {city.name}
           </Link>

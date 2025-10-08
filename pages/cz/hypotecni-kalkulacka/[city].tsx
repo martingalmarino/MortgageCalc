@@ -78,17 +78,23 @@ export default function CityPage({ city, otherCities, referenceRate }: CityPageP
         <CalculatorHero cityName={city.name} defaultRate={referenceRate} />
 
         {/* CTA Compare Banks */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <CTACompareBanks />
+        <div className="bg-white py-12">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <CTACompareBanks />
+          </div>
         </div>
 
         {/* City Pills for Interlinking */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <CityPills cities={otherCities} currentCity={city.name} />
+        <div className="bg-neutral-100 py-12">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <CityPills cities={otherCities} currentCity={city.name} />
+          </div>
         </div>
 
         {/* FAQ Section */}
-        <FAQAccordion cityName={city.name} />
+        <div className="bg-white">
+          <FAQAccordion cityName={city.name} />
+        </div>
 
         {/* Footer */}
         <footer className="bg-neutral-50 border-t border-neutral-300 py-8 mt-16">
