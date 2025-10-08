@@ -91,14 +91,14 @@ export default function CityPage({ city, otherCities, referenceRate }: CityPageP
         <FAQAccordion cityName={city.name} />
 
         {/* Footer */}
-        <footer className="bg-text-primary text-white py-12 mt-16">
+        <footer className="bg-neutral-50 border-t border-neutral-300 py-8 mt-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4">Hypoteční kalkulačka ČR</h3>
-              <p className="text-gray-300 mb-6">
+              <h3 className="text-lg font-semibold text-neutral-800 mb-2">Hypoteční kalkulačka ČR</h3>
+              <p className="text-sm text-neutral-600 mb-4">
                 Profesionální nástroj pro výpočet hypotéky zdarma pro celou Českou republiku
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+              <div className="flex flex-wrap justify-center gap-3 text-sm text-neutral-600">
                 <span>© 2025 Hypoteční kalkulačka</span>
                 <span>•</span>
                 <span>Vytvořeno pro český trh</span>

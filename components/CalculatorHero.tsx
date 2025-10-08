@@ -36,32 +36,32 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
   };
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-12 md:py-16 bg-neutral-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex p-3 bg-primary-50 rounded-full mb-6">
-            <Home className="text-primary" size={40} />
+          <div className="inline-flex p-3 bg-primary-light rounded-full mb-6">
+            <Home className="text-primary" size={36} />
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
+          <h1 className="text-4xl md:text-5xl font-semibold text-neutral-800 mb-3">
             Hypoteční kalkulačka {cityName ? `– ${cityName}` : 'pro Českou republiku'} 2025
           </h1>
           
-          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
             Spočítejte si měsíční splátku hypotéky a zjistěte, kolik vás bude nemovitost{cityName ? ` v ${cityName === 'Praha' ? 'Praze' : `městě ${cityName}`}` : ''} skutečně stát
           </p>
 
           {/* City Selector (only on home page) */}
           {!cityName && (
-            <div className="mt-6 max-w-md mx-auto">
+            <div className="mt-8 max-w-md mx-auto">
               <div className="relative">
                 <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" size={20} />
                 <select
                   value={selectedCity}
                   onChange={handleCityChange}
                   aria-label="Výběr města"
-                  className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-primary transition-colors text-base bg-white"
+                  className="w-full pl-12 pr-4 py-3 bg-white border border-neutral-300 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all text-base"
                 >
                   <option value="">Vyberte město pro specifické informace</option>
                   {citiesCZ.map((city) => (
@@ -71,7 +71,7 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
                   ))}
                 </select>
               </div>
-              <p className="mt-2 text-xs text-text-secondary">
+              <p className="mt-2 text-xs text-neutral-600">
                 Kalkulačka funguje stejně pro celou ČR. Výběr města zobrazí místní informace.
               </p>
             </div>
@@ -79,23 +79,23 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
         </div>
 
         {/* Trust Badges */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10">
-          <div className="flex items-center gap-2 text-sm text-text-secondary">
+        <div className="flex flex-wrap justify-center gap-6 mb-10">
+          <div className="flex items-center gap-2 text-sm text-neutral-600">
             <Shield className="text-primary" size={18} />
             <span className="font-medium">Zdarma</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-text-secondary">
+          <div className="flex items-center gap-2 text-sm text-neutral-600">
             <TrendingUp className="text-primary" size={18} />
             <span className="font-medium">Aktuální sazby</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-text-secondary">
+          <div className="flex items-center gap-2 text-sm text-neutral-600">
             <Clock className="text-primary" size={18} />
             <span className="font-medium">Bez registrace</span>
           </div>
         </div>
 
         {/* Calculator Card */}
-        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 md:p-10">
+        <div className="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-neutral-300">
           <CalculatorForm onCalculate={handleCalculate} defaultRate={referenceRate} />
           
           <div id="results">
@@ -104,8 +104,8 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
         </div>
 
         {/* Quick Info */}
-        <div className="mt-8 text-center">
-          <div className="inline-flex items-center gap-2 text-sm text-text-secondary bg-primary-50 px-4 py-3 rounded-lg">
+        <div className="mt-6 text-center">
+          <div className="inline-flex items-center gap-2 text-sm text-primary bg-primary-light px-4 py-3 rounded-md">
             <Lightbulb className="text-primary flex-shrink-0" size={18} />
             <p>
               <strong>Tip:</strong> Průměrná úroková sazba hypotéky v ČR je aktuálně okolo {referenceRate}%.
@@ -117,4 +117,3 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
     </section>
   );
 }
-

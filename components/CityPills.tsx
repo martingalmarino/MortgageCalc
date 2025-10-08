@@ -13,7 +13,7 @@ export default function CityPills({ cities, currentCity }: CityPillsProps) {
     <div className="my-10">
       <div className="flex items-center gap-2 mb-4">
         <MapPin className="text-primary" size={20} />
-        <h3 className="text-lg font-semibold text-text-primary">
+        <h3 className="text-lg font-semibold text-neutral-800">
           Hypoteční kalkulačka pro další města
         </h3>
       </div>
@@ -23,7 +23,7 @@ export default function CityPills({ cities, currentCity }: CityPillsProps) {
           <Link
             key={city.slug}
             href={`/cz/hypotecni-kalkulacka/${city.slug}`}
-            className="inline-flex items-center px-4 py-2 bg-white border-2 border-gray-200 hover:border-primary hover:bg-primary-50 rounded-full text-sm font-medium text-text-primary transition-all duration-200 shadow-sm hover:shadow"
+            className="inline-flex items-center px-4 py-2 bg-neutral-100 hover:bg-primary-light hover:text-primary border border-neutral-300 rounded-full text-sm font-medium text-neutral-800 transition-all duration-200 shadow-sm hover:shadow"
           >
             {city.name}
           </Link>
@@ -31,11 +31,10 @@ export default function CityPills({ cities, currentCity }: CityPillsProps) {
       </div>
 
       {currentCity && (
-        <p className="mt-4 text-sm text-text-secondary">
+        <p className="mt-4 text-sm text-neutral-600">
           Použijte naši hypoteční kalkulačku pro {currentCity} a další města v České republice
         </p>
       )}
     </div>
   );
 }
-
