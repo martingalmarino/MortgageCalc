@@ -7,10 +7,6 @@
     --font-inter: 'Inter', 'Public Sans', system-ui, sans-serif;
   }
 
-  * {
-    @apply border-border;
-  }
-
   body {
     @apply bg-background text-text-primary;
     font-feature-settings: "rlig" 1, "calt" 1;
