@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next';
 import { getAllCitySlugs } from '@/lib/citiesCZ';
 
 function generateSiteMap(cities: string[]) {
-  const baseUrl = 'https://hypotecni-kalkulacka.cz';
+  const baseUrl = 'https://www.ratecomparecz.com';
   
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

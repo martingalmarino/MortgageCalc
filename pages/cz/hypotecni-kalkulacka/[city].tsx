@@ -39,7 +39,7 @@ export default function CityPage({ city, otherCities, referenceRate }: CityPageP
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://hypotecni-kalkulacka.cz/cz/hypotecni-kalkulacka/${city.slug}`} />
+        <link rel="canonical" href={`https://www.ratecomparecz.com/cz/hypotecni-kalkulacka/${city.slug}`} />
         
         {/* Structured Data - Organization */}
         <script
@@ -50,7 +50,7 @@ export default function CityPage({ city, otherCities, referenceRate }: CityPageP
               '@type': 'WebApplication',
               name: `Hypoteční kalkulačka ${city.name}`,
               description: description,
-              url: `https://hypotecni-kalkulacka.cz/cz/hypotecni-kalkulacka/${city.slug}`,
+              url: `https://www.ratecomparecz.com/cz/hypotecni-kalkulacka/${city.slug}`,
               applicationCategory: 'FinanceApplication',
               operatingSystem: 'Any',
               offers: {

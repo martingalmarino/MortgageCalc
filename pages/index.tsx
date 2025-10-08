@@ -36,7 +36,7 @@ export default function Home({ referenceRate }: HomeProps) {
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://hypotecni-kalkulacka.cz/" />
+        <link rel="canonical" href="https://www.ratecomparecz.com/" />
         
         {/* Structured Data */}
         <script
@@ -47,7 +47,7 @@ export default function Home({ referenceRate }: HomeProps) {
               '@type': 'WebApplication',
               name: 'Hypoteční kalkulačka ČR',
               description: description,
-              url: 'https://hypotecni-kalkulacka.cz/',
+              url: 'https://www.ratecomparecz.com/',
               applicationCategory: 'FinanceApplication',
               operatingSystem: 'Any',
               offers: {
