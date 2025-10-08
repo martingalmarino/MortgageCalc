@@ -4,6 +4,8 @@
  * where M = monthly payment, P = principal, r = monthly rate, n = total months
  */
 
+import ratesData from './mortgageRatesCZ.json';
+
 export interface MortgageInputs {
   propertyPrice: number;
   downPayment: number; // as amount in CZK
@@ -100,11 +102,48 @@ export function calculateDownPaymentPercentage(
 }
 
 /**
- * Get reference interest rate (placeholder for CNB integration)
+ * Get reference interest rate from ČNB data
+ * Automatically updated by the rates updater script
  */
 export function getReferenceInterestRate(): number {
-  // Default reference rate for MVP
-  // In future: integrate with CNB API
-  return 5.5;
+  try {
+    // Use rate from JSON file (updated by script)
+    const rate = ratesData.averageRate;
+    
+    // Validate rate is reasonable
+    if (rate >= 1 && rate <= 20) {
+      return rate;
+    }
+    
+    // Fallback if data seems invalid
+    console.warn('Invalid rate in data file, using fallback');
+    return 5.5;
+  } catch (error) {
+    // Fallback if file can't be read
+    console.warn('Could not read rates data, using fallback');
+    return 5.5;
+  }
+}
+
+/**
+ * Get last update information
+ */
+export function getLastRateUpdate(): string {
+  try {
+    return ratesData.lastUpdated || 'Unknown';
+  } catch {
+    return 'Unknown';
+  }
+}
+
+/**
+ * Get rate source information
+ */
+export function getRateSource(): string {
+  try {
+    return ratesData.source || 'ČNB';
+  } catch {
+    return 'ČNB';
+  }
 }
 

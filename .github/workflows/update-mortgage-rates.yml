@@ -1,0 +1,60 @@
+name: Update Mortgage Rates from ČNB
+
+on:
+  # Run on the 5th of every month at 3 AM UTC
+  schedule:
+    - cron: '0 3 5 * *'
+  
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-rates:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run rate updater
+        run: npm run update:rates
+        continue-on-error: true
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code lib/mortgageRatesCZ.json || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "ČNB Rate Updater Bot"
+          git config user.email "bot@mortgage-calculator.cz"
+          git add lib/mortgageRatesCZ.json
+          git commit -m "chore: update mortgage rates from ČNB [automated]"
+          git push
+      
+      - name: Create issue if update failed
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Mortgage Rate Update Failed',
+              body: 'The automated ČNB rate update failed. Please check the logs and update manually if needed.',
+              labels: ['automation', 'bug']
+            })
+
