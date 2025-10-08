@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Home, Shield, TrendingUp, Clock, Lightbulb } from 'lucide-react';
+import { Home, Shield, TrendingUp, Clock, Lightbulb, MapPin } from 'lucide-react';
 import CalculatorForm from './CalculatorForm';
 import ResultSummary from './ResultSummary';
 import { calculateMortgage, MortgageInputs, MortgageResults, getReferenceInterestRate } from '@/lib/mortgageCalc';
+import { citiesCZ } from '@/lib/citiesCZ';
 
 interface CalculatorHeroProps {
   cityName?: string;
@@ -11,6 +12,7 @@ interface CalculatorHeroProps {
 
 export default function CalculatorHero({ cityName, defaultRate }: CalculatorHeroProps) {
   const [results, setResults] = useState<MortgageResults | null>(null);
+  const [selectedCity, setSelectedCity] = useState<string>('');
   const referenceRate = defaultRate || getReferenceInterestRate();
 
   const handleCalculate = (inputs: MortgageInputs) => {
@@ -26,6 +28,13 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
     }, 100);
   };
 
+  const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const citySlug = e.target.value;
+    if (citySlug) {
+      window.location.href = `/cz/hypotecni-kalkulacka/${citySlug}`;
+    }
+  };
+
   return (
     <section className="py-12 md:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,12 +45,37 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
-            Hypoteční kalkulačka {cityName ? `– ${cityName}` : ''} 2025
+            Hypoteční kalkulačka {cityName ? `– ${cityName}` : 'pro Českou republiku'} 2025
           </h1>
           
           <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto">
             Spočítejte si měsíční splátku hypotéky a zjistěte, kolik vás bude nemovitost{cityName ? ` v ${cityName === 'Praha' ? 'Praze' : `městě ${cityName}`}` : ''} skutečně stát
           </p>
+
+          {/* City Selector (only on home page) */}
+          {!cityName && (
+            <div className="mt-6 max-w-md mx-auto">
+              <div className="relative">
+                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" size={20} />
+                <select
+                  value={selectedCity}
+                  onChange={handleCityChange}
+                  aria-label="Výběr města"
+                  className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-primary transition-colors text-base bg-white"
+                >
+                  <option value="">Vyberte město pro specifické informace</option>
+                  {citiesCZ.map((city) => (
+                    <option key={city.slug} value={city.slug}>
+                      {city.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <p className="mt-2 text-xs text-text-secondary">
+                Kalkulačka funguje stejně pro celou ČR. Výběr města zobrazí místní informace.
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Trust Badges */}
@@ -75,7 +109,7 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
             <Lightbulb className="text-primary flex-shrink-0" size={18} />
             <p>
               <strong>Tip:</strong> Průměrná úroková sazba hypotéky v ČR je aktuálně okolo {referenceRate}%.
-              {cityName && ` Pro ${cityName} platí standardní podmínky českých bank.`}
+              {cityName ? ` Pro ${cityName} platí standardní podmínky českých bank.` : ' Podmínky jsou shodné pro celou Českou republiku.'}
             </p>
           </div>
         </div>
