@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Shield, TrendingUp, Clock, Lightbulb, MapPin } from 'lucide-react';
+import { Shield, TrendingUp, Clock, Lightbulb, MapPin } from 'lucide-react';
 import CalculatorForm from './CalculatorForm';
 import ResultSummary from './ResultSummary';
 import { calculateMortgage, MortgageInputs, MortgageResults, getReferenceInterestRate } from '@/lib/mortgageCalc';
@@ -36,14 +36,10 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
   };
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-white to-neutral-50">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-[#4cec5d] to-neutral-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex p-3 bg-primary-light rounded-full mb-6">
-            <Home className="text-primary" size={36} />
-          </div>
-          
           <h1 className="text-4xl md:text-5xl font-semibold text-neutral-800 mb-3">
             Hypoteční kalkulačka {cityName ? `– ${cityName}` : 'pro Českou republiku'} 2025
           </h1>
