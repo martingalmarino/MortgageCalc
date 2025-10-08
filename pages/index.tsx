@@ -86,7 +86,7 @@ export default function Home({ referenceRate }: HomeProps) {
         </div>
 
         {/* Footer */}
-        <footer className="bg-navBg border-t border-primary/20 py-8 mt-16">
+        <footer className="border-t border-white/10 py-8 mt-16" style={{ background: 'linear-gradient(90deg, #047857 0%, #059669 100%)' }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h3 className="text-lg font-semibold text-white mb-2">Hypoteční kalkulačka ČR</h3>
