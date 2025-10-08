@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { citiesCZ } from '@/lib/citiesCZ';
 import { getReferenceInterestRate } from '@/lib/mortgageCalc';
+import Header from '@/components/Header';
 import CalculatorHero from '@/components/CalculatorHero';
 import CTACompareBanks from '@/components/CTACompareBanks';
 import CityPills from '@/components/CityPills';
@@ -58,6 +59,8 @@ export default function Home({ referenceRate }: HomeProps) {
           }}
         />
       </Head>
+
+      <Header />
 
       <main className="min-h-screen">
         {/* Calculator Hero Section */}

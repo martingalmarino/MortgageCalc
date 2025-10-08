@@ -2,6 +2,8 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import { getAllCitySlugs, getCityBySlug, getOtherCities, City } from '@/lib/citiesCZ';
 import { getReferenceInterestRate } from '@/lib/mortgageCalc';
+import Header from '@/components/Header';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import CalculatorHero from '@/components/CalculatorHero';
 import CTACompareBanks from '@/components/CTACompareBanks';
 import CityPills from '@/components/CityPills';
@@ -60,6 +62,16 @@ export default function CityPage({ city, otherCities, referenceRate }: CityPageP
           }}
         />
       </Head>
+
+      <Header />
+
+      <Breadcrumbs
+        items={[
+          { label: 'Domů', href: '/' },
+          { label: 'Hypoteční kalkulačka', href: '/' },
+          { label: city.name },
+        ]}
+      />
 
       <main className="min-h-screen">
         {/* Calculator Hero Section */}
