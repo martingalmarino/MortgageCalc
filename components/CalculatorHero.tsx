@@ -36,15 +36,15 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
   };
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-[#4cec5d] to-neutral-50">
+    <section className="py-12 md:py-16 bg-gradient-to-r from-heroFrom to-heroTo">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-semibold text-neutral-800 mb-3">
+          <h1 className="text-4xl md:text-5xl font-semibold text-white mb-3">
             Hypoteční kalkulačka {cityName ? `– ${cityName}` : 'pro Českou republiku'} 2025
           </h1>
           
-          <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Spočítejte si měsíční splátku hypotéky a zjistěte, kolik vás bude nemovitost{cityName ? ` v ${cityName === 'Praha' ? 'Praze' : `městě ${cityName}`}` : ''} skutečně stát
           </p>
 
@@ -57,7 +57,7 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
                   value={selectedCity}
                   onChange={handleCityChange}
                   aria-label="Výběr města"
-                  className="w-full pl-12 pr-4 py-3 bg-white border border-neutral-300 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all text-base"
+                  className="w-full pl-12 pr-4 py-3 bg-white border border-cardBorder rounded-md focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition-all text-base"
                 >
                   <option value="">Vyberte město pro specifické informace</option>
                   {citiesCZ.map((city) => (
@@ -67,7 +67,7 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
                   ))}
                 </select>
               </div>
-              <p className="mt-2 text-xs text-neutral-600">
+              <p className="mt-2 text-xs text-white/80">
                 Kalkulačka funguje stejně pro celou ČR. Výběr města zobrazí místní informace.
               </p>
             </div>
@@ -76,22 +76,22 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
 
         {/* Trust Badges */}
         <div className="flex flex-wrap justify-center gap-6 mb-10">
-          <div className="flex items-center gap-2 text-sm text-neutral-600">
-            <Shield className="text-primary" size={18} />
+          <div className="flex items-center gap-2 text-sm text-white/90">
+            <Shield className="text-white" size={18} />
             <span className="font-medium">Zdarma</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-neutral-600">
-            <TrendingUp className="text-primary" size={18} />
+          <div className="flex items-center gap-2 text-sm text-white/90">
+            <TrendingUp className="text-white" size={18} />
             <span className="font-medium">Aktuální sazby</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-neutral-600">
-            <Clock className="text-primary" size={18} />
+          <div className="flex items-center gap-2 text-sm text-white/90">
+            <Clock className="text-white" size={18} />
             <span className="font-medium">Bez registrace</span>
           </div>
         </div>
 
         {/* Calculator Card */}
-        <div className="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-neutral-300">
+        <div className="bg-cardBg rounded-xl shadow-sm p-6 md:p-8 border border-cardBorder">
           <CalculatorForm onCalculate={handleCalculate} defaultRate={referenceRate} />
           
           <div id="results">
@@ -101,9 +101,9 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
 
         {/* Quick Info */}
         <div className="mt-6 text-center">
-          <div className="inline-flex items-center gap-2 text-sm text-primary bg-primary-light px-4 py-3 rounded-md">
-            <Lightbulb className="text-primary flex-shrink-0" size={18} />
-            <p>
+          <div className="inline-flex items-center gap-2 text-sm text-white bg-white/10 backdrop-blur-sm px-4 py-3 rounded-md">
+            <Lightbulb className="text-white flex-shrink-0" size={18} />
+            <p className="text-white">
               <strong>Tip:</strong> Průměrná úroková sazba hypotéky v ČR je aktuálně okolo {referenceRate}%.
               {cityName ? ` Pro ${cityName} platí standardní podmínky českých bank.` : ' Podmínky jsou shodné pro celou Českou republiku.'}
             </p>

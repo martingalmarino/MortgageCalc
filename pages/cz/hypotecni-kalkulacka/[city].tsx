@@ -78,33 +78,33 @@ export default function CityPage({ city, otherCities, referenceRate }: CityPageP
         <CalculatorHero cityName={city.name} defaultRate={referenceRate} />
 
         {/* CTA Compare Banks */}
-        <div className="bg-white py-12">
+        <div className="bg-neutralBg py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <CTACompareBanks />
           </div>
         </div>
 
         {/* City Pills for Interlinking */}
-        <div className="bg-neutral-100 py-12">
+        <div className="bg-cardBg py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <CityPills cities={otherCities} currentCity={city.name} />
           </div>
         </div>
 
         {/* FAQ Section */}
-        <div className="bg-white">
+        <div className="bg-neutralBg">
           <FAQAccordion cityName={city.name} />
         </div>
 
         {/* Footer */}
-        <footer className="bg-neutral-50 border-t border-neutral-300 py-8 mt-16">
+        <footer className="bg-navBg border-t border-primary/20 py-8 mt-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h3 className="text-lg font-semibold text-neutral-800 mb-2">Hypoteční kalkulačka ČR</h3>
-              <p className="text-sm text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold text-white mb-2">Hypoteční kalkulačka ČR</h3>
+              <p className="text-sm text-white/80 mb-4">
                 Profesionální nástroj pro výpočet hypotéky zdarma pro celou Českou republiku
               </p>
-              <div className="flex flex-wrap justify-center gap-3 text-sm text-neutral-600">
+              <div className="flex flex-wrap justify-center gap-3 text-sm text-white/70">
                 <span>© 2025 Hypoteční kalkulačka</span>
                 <span>•</span>
                 <span>Vytvořeno pro český trh</span>

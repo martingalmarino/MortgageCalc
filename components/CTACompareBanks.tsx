@@ -16,17 +16,17 @@ export default function CTACompareBanks() {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-primary-light/30 to-accent/10 border border-primary/20 rounded-2xl p-8 md:p-10 shadow-sm">
+    <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-8 md:p-10 shadow-sm">
       <div className="max-w-3xl mx-auto text-center">
-        <div className="inline-flex p-3 bg-white/80 backdrop-blur-sm rounded-full mb-6 shadow-sm">
+        <div className="inline-flex p-3 bg-white backdrop-blur-sm rounded-full mb-6 shadow-sm">
           <Building2 className="text-primary" size={32} />
         </div>
         
-        <h2 className="text-3xl md:text-4xl font-semibold text-neutral-800 mb-4">
+        <h2 className="text-3xl md:text-4xl font-semibold text-textMain mb-4">
           Připraveni porovnat hypoteční nabídky?
         </h2>
         
-        <p className="text-lg text-neutral-600 mb-6">
+        <p className="text-lg text-textSecondary mb-6">
           Podívejte se na aktuální sazby od nejlepších českých bank a najděte si tu nejvýhodnější hypotéku.
         </p>
 
@@ -35,9 +35,9 @@ export default function CTACompareBanks() {
           {trustChips.map((chip, index) => (
             <div 
               key={index}
-              className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-full text-xs font-medium text-neutral-800 shadow-sm"
+              className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-full text-xs font-medium text-textMain shadow-sm"
             >
-              <CheckCircle className="text-primary" size={14} />
+              <CheckCircle className="text-accent" size={14} />
               {chip}
             </div>
           ))}
@@ -48,10 +48,10 @@ export default function CTACompareBanks() {
           {banks.map((bank, index) => (
             <div 
               key={index}
-              className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg shadow-sm border border-neutral-300 grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all"
+              className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg shadow-sm border border-cardBorder grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all"
             >
-              <Landmark className="text-neutral-600" size={18} />
-              <span className="text-sm font-medium text-neutral-800 hidden sm:inline">
+              <Landmark className="text-textSecondary" size={18} />
+              <span className="text-sm font-medium text-textMain hidden sm:inline">
                 {bank.name}
               </span>
             </div>
@@ -59,12 +59,12 @@ export default function CTACompareBanks() {
         </div>
 
         {/* CTA Button */}
-        <button className="group bg-primary hover:bg-primary-dark text-white font-medium h-12 px-8 rounded-md transition-all duration-200 hover:scale-[1.02] inline-flex items-center gap-3 text-base shadow-sm">
+        <button className="group bg-primary hover:bg-primaryHover text-white font-medium h-12 px-8 rounded-lg transition-all duration-200 hover:scale-[1.02] inline-flex items-center gap-3 text-base shadow-sm">
           Porovnat hypoteční nabídky
           <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
         </button>
 
-        <p className="mt-4 text-sm text-neutral-600">
+        <p className="mt-4 text-sm text-textSecondary">
           Vyplnění trvá pouze 2 minuty
         </p>
       </div>

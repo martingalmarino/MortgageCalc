@@ -13,7 +13,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <nav aria-label="Breadcrumb" className="py-4 bg-neutral-50">
+    <nav aria-label="Breadcrumb" className="py-4 bg-neutralBg">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol className="flex items-center flex-wrap gap-2 text-sm">
           {items.map((item, index) => {
@@ -22,18 +22,18 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
             return (
               <li key={index} className="flex items-center gap-2">
                 {index > 0 && (
-                  <ChevronRight className="text-neutral-600" size={14} />
+                  <ChevronRight className="text-textSecondary" size={14} />
                 )}
                 {item.href && !isLast ? (
                   <Link
                     href={item.href}
-                    className="text-neutral-600 hover:text-primary transition-colors"
+                    className="text-textSecondary hover:text-accent transition-colors"
                   >
                     {item.label}
                   </Link>
                 ) : (
                   <span
-                    className={isLast ? 'text-neutral-800 font-medium' : 'text-neutral-600'}
+                    className={isLast ? 'text-textMain font-medium' : 'text-textSecondary'}
                     aria-current={isLast ? 'page' : undefined}
                   >
                     {item.label}

@@ -67,16 +67,16 @@ export default function FAQAccordion({ cityName }: FAQAccordionProps) {
       />
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-cardBg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <div className="inline-flex p-3 bg-primary-light rounded-full mb-4">
-              <HelpCircle className="text-primary" size={28} />
+            <div className="inline-flex p-3 bg-accent/10 rounded-full mb-4">
+              <HelpCircle className="text-accent" size={28} />
             </div>
-            <h2 className="text-3xl md:text-4xl font-semibold text-neutral-800 mb-3">
+            <h2 className="text-3xl md:text-4xl font-semibold text-textMain mb-3">
               Často kladené otázky
             </h2>
-            <p className="text-lg text-neutral-600">
+            <p className="text-lg text-textSecondary">
               Vše, co potřebujete vědět o hypotékách v České republice
             </p>
           </div>
@@ -85,18 +85,18 @@ export default function FAQAccordion({ cityName }: FAQAccordionProps) {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border border-neutral-300 rounded-xl overflow-hidden transition-all duration-200 hover:border-primary/50 bg-white shadow-sm"
+                className="border border-cardBorder rounded-xl overflow-hidden transition-all duration-200 hover:border-accent/50 bg-cardBg shadow-sm"
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left bg-white hover:bg-neutral-50 transition-colors"
-                  aria-expanded={openIndex === index ? 'true' : 'false'}
+                  className="w-full px-6 py-4 flex items-center justify-between text-left bg-cardBg hover:bg-neutralBg transition-colors"
+                  aria-expanded={openIndex === index ? true : false}
                 >
-                  <span className="text-base font-medium text-neutral-800 pr-4">
+                  <span className="text-base font-medium text-textMain pr-4">
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`text-primary flex-shrink-0 transition-transform duration-200 ${
+                    className={`text-accent flex-shrink-0 transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     size={20}
@@ -108,8 +108,8 @@ export default function FAQAccordion({ cityName }: FAQAccordionProps) {
                     openIndex === index ? 'max-h-96' : 'max-h-0'
                   }`}
                 >
-                  <div className="px-6 py-4 bg-neutral-50 border-t border-neutral-200">
-                    <p className="text-neutral-600 leading-relaxed text-[15px]">
+                  <div className="px-6 py-4 bg-neutralBg border-t border-cardBorder">
+                    <p className="text-textSecondary leading-relaxed text-[15px]">
                       {faq.answer}
                     </p>
                   </div>

@@ -8,21 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#0A7D77',
-          dark: '#085F5A',
-          light: '#E6F4F1',
-        },
-        accent: {
-          DEFAULT: '#FFD166',
-        },
-        neutral: {
-          50: '#F9FAFB',
-          100: '#F5F7FA',
-          300: '#D1D5DB',
-          600: '#4B5563',
-          800: '#1F2937',
-        },
+        heroFrom: '#4CEC5D',        // Hero gradient start
+        heroTo: '#38C851',          // Hero gradient end
+        primary: '#2E7D32',         // Main CTA and active elements
+        primaryHover: '#256628',    // Hover/focus for CTA
+        accent: '#43A047',          // Badges, highlights
+        neutralBg: '#F9FAFB',       // Global page background
+        cardBg: '#FFFFFF',          // Cards and content boxes
+        cardBorder: '#E5E7EB',      // Subtle card borders
+        navBg: '#1B5E20',           // Navbar and footer background
+        textMain: '#1F2937',        // Main text
+        textSecondary: '#4B5563',   // Secondary text
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],

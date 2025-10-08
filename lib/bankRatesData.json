@@ -1,0 +1,206 @@
+{
+  "lastUpdated": "2025-10-08",
+  "source": "Bank websites scraping",
+  "banks": [
+    {
+      "id": "ceska-sporitelna",
+      "name": "Česká spořitelna",
+      "logo": "/banks/cs-logo.svg",
+      "website": "https://www.csas.cz",
+      "rates": [
+        {
+          "fixedPeriod": "1y",
+          "rate": 5.2,
+          "apr": 5.5,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "3y",
+          "rate": 5.0,
+          "apr": 5.3,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "5y",
+          "rate": 4.9,
+          "apr": 5.2,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "10y",
+          "rate": 5.1,
+          "apr": 5.4,
+          "lastUpdated": "2025-10-08"
+        }
+      ]
+    },
+    {
+      "id": "csob",
+      "name": "ČSOB",
+      "logo": "/banks/csob-logo.svg",
+      "website": "https://www.csob.cz",
+      "rates": [
+        {
+          "fixedPeriod": "1y",
+          "rate": 5.3,
+          "apr": 5.6,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "3y",
+          "rate": 5.1,
+          "apr": 5.4,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "5y",
+          "rate": 5.0,
+          "apr": 5.3,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "10y",
+          "rate": 5.2,
+          "apr": 5.5,
+          "lastUpdated": "2025-10-08"
+        }
+      ]
+    },
+    {
+      "id": "komercni-banka",
+      "name": "Komerční banka",
+      "logo": "/banks/kb-logo.svg",
+      "website": "https://www.kb.cz",
+      "rates": [
+        {
+          "fixedPeriod": "1y",
+          "rate": 5.4,
+          "apr": 5.7,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "3y",
+          "rate": 5.2,
+          "apr": 5.5,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "5y",
+          "rate": 5.1,
+          "apr": 5.4,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "10y",
+          "rate": 5.3,
+          "apr": 5.6,
+          "lastUpdated": "2025-10-08"
+        }
+      ]
+    },
+    {
+      "id": "raiffeisenbank",
+      "name": "Raiffeisenbank",
+      "logo": "/banks/rb-logo.svg",
+      "website": "https://www.rb.cz",
+      "rates": [
+        {
+          "fixedPeriod": "1y",
+          "rate": 5.1,
+          "apr": 5.4,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "3y",
+          "rate": 4.9,
+          "apr": 5.2,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "5y",
+          "rate": 4.8,
+          "apr": 5.1,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "10y",
+          "rate": 5.0,
+          "apr": 5.3,
+          "lastUpdated": "2025-10-08"
+        }
+      ]
+    },
+    {
+      "id": "moneta",
+      "name": "MONETA Money Bank",
+      "logo": "/banks/moneta-logo.svg",
+      "website": "https://www.moneta.cz",
+      "rates": [
+        {
+          "fixedPeriod": "1y",
+          "rate": 5.5,
+          "apr": 5.8,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "3y",
+          "rate": 5.3,
+          "apr": 5.6,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "5y",
+          "rate": 5.2,
+          "apr": 5.5,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "10y",
+          "rate": 5.4,
+          "apr": 5.7,
+          "lastUpdated": "2025-10-08"
+        }
+      ]
+    },
+    {
+      "id": "unicredit",
+      "name": "UniCredit Bank",
+      "logo": "/banks/unicredit-logo.svg",
+      "website": "https://www.unicreditbank.cz",
+      "rates": [
+        {
+          "fixedPeriod": "1y",
+          "rate": 5.6,
+          "apr": 5.9,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "3y",
+          "rate": 5.4,
+          "apr": 5.7,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "5y",
+          "rate": 5.3,
+          "apr": 5.6,
+          "lastUpdated": "2025-10-08"
+        },
+        {
+          "fixedPeriod": "10y",
+          "rate": 5.5,
+          "apr": 5.8,
+          "lastUpdated": "2025-10-08"
+        }
+      ]
+    }
+  ],
+  "averageRates": {
+    "1y": 5.35,
+    "3y": 5.15,
+    "5y": 5.05,
+    "10y": 5.25
+  },
+  "notes": "Sample data for MVP. Will be replaced by actual scraping."
+}
+
