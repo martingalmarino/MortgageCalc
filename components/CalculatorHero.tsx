@@ -36,7 +36,7 @@ export default function CalculatorHero({ cityName, defaultRate }: CalculatorHero
   };
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-r from-heroFrom to-heroTo">
+    <section className="py-12 md:py-16" style={{ background: 'linear-gradient(135deg, #047857 0%, #059669 100%)' }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
         <div className="text-center mb-10">
