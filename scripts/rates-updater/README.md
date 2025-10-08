@@ -22,17 +22,48 @@ lib/
 
 ### Manual Update
 
-Run the updater manually:
+#### Option 1: Automatic Fetch (tries ČNB sources)
 
 ```bash
 npm run update:rates
 ```
 
 This will:
-1. Fetch the latest mortgage rate from ČNB
+1. Try to fetch from ČNB sources
 2. Validate the data
 3. Update `/lib/mortgageRatesCZ.json`
 4. Log any changes
+
+#### Option 2: Manual Update (recommended for now)
+
+If you know the current rate from ČNB or another reliable source:
+
+```bash
+npm run update:rates:manual -- --rate 5.6 --source "ČNB website" --period "October 2025"
+```
+
+**Arguments:**
+- `--rate` (required): The mortgage rate percentage (e.g., 5.6 for 5.6%)
+- `--source` (optional): Where you got the rate from
+- `--period` (optional): Time period (e.g., "October 2025")
+- `--note` (optional): Additional notes
+
+**Example:**
+```bash
+npm run update:rates:manual -- --rate 5.8
+```
+
+The script will:
+1. ✅ Validate the rate (must be 1-20%)
+2. ✅ Show comparison with previous rate
+3. ✅ Update the JSON file
+4. ✅ Give you git commands to commit
+
+**Where to find current ČNB rates:**
+1. Visit: https://www.cnb.cz/cs/financni-trhy/
+2. Look for "Úrokové sazby" or mortgage rate statistics
+3. Use the average 5-year fixed rate
+4. Run the manual update command with that rate
 
 ### Expected Output
 

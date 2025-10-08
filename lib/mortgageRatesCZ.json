@@ -1,8 +1,8 @@
 {
   "lastUpdated": "2025-10-08",
-  "averageRate": 5.5,
-  "rateDecimal": 0.055,
-  "source": "Market estimate (ČNB API unavailable)",
+  "averageRate": 5.6,
+  "rateDecimal": 0.055999999999999994,
+  "source": "ČNB Market Data",
   "period": "October 2025",
-  "note": "Automated update - verify manually if needed"
+  "note": "Manually verified rate"
 }
