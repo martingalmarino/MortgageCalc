@@ -15,17 +15,12 @@ export default function App({ Component, pageProps }: AppProps) {
       <Script
         src="https://cdn.cookiehub.eu/c2/29a4b0cf.js"
         strategy="afterInteractive"
-      />
-      <Script
-        id="cookiehub-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            document.addEventListener("DOMContentLoaded", function(event) {
-              var cpm = {};
-              window.cookiehub.load(cpm);
-            });
-          `,
+        onLoad={() => {
+          // Inicializar CookieHub después de que el script se cargue
+          if (typeof window !== 'undefined' && (window as any).cookiehub) {
+            const cpm = {};
+            (window as any).cookiehub.load(cpm);
+          }
         }}
       />
       
