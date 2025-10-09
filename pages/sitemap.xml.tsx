@@ -14,6 +14,14 @@ function generateSiteMap(cities: string[]) {
        <priority>1.0</priority>
      </url>
      
+     <!-- Compare Mortgage Rates -->
+     <url>
+       <loc>${baseUrl}/compare-mortgage-rates</loc>
+       <lastmod>${new Date().toISOString()}</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9</priority>
+     </url>
+     
      <!-- City Pages -->
      ${cities
        .map((city) => {

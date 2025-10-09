@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, Building2, CheckCircle, Landmark } from 'lucide-react';
 
 export default function CTACompareBanks() {
@@ -59,10 +60,13 @@ export default function CTACompareBanks() {
         </div>
 
         {/* CTA Button */}
-        <button className="group bg-primary hover:bg-primaryHover text-white font-medium h-12 px-8 rounded-lg transition-all duration-200 hover:scale-[1.02] inline-flex items-center gap-3 text-base shadow-sm">
+        <Link 
+          href="/compare-mortgage-rates"
+          className="group bg-primary hover:bg-primaryHover text-white font-medium h-12 px-8 rounded-lg transition-all duration-200 hover:scale-[1.02] inline-flex items-center gap-3 text-base shadow-sm"
+        >
           Porovnat hypoteční nabídky
           <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
-        </button>
+        </Link>
 
         <p className="mt-4 text-sm text-textSecondary">
           Vyplnění trvá pouze 2 minuty

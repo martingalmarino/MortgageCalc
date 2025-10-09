@@ -1,207 +1,95 @@
-{
-  "lastUpdated": "2025-10-08",
-  "source": "Bank websites scraping",
-  "banks": [
-    {
-      "id": "ceska-sporitelna",
-      "name": "Česká spořitelna",
-      "logo": "/banks/cs-logo.svg",
-      "website": "https://www.csas.cz",
-      "rates": [
-        {
-          "fixedPeriod": "1y",
-          "rate": 5.2,
-          "apr": 5.5,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "3y",
-          "rate": 5.0,
-          "apr": 5.3,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "5y",
-          "rate": 4.9,
-          "apr": 5.2,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "10y",
-          "rate": 5.1,
-          "apr": 5.4,
-          "lastUpdated": "2025-10-08"
-        }
-      ]
-    },
-    {
-      "id": "csob",
-      "name": "ČSOB",
-      "logo": "/banks/csob-logo.svg",
-      "website": "https://www.csob.cz",
-      "rates": [
-        {
-          "fixedPeriod": "1y",
-          "rate": 5.3,
-          "apr": 5.6,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "3y",
-          "rate": 5.1,
-          "apr": 5.4,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "5y",
-          "rate": 5.0,
-          "apr": 5.3,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "10y",
-          "rate": 5.2,
-          "apr": 5.5,
-          "lastUpdated": "2025-10-08"
-        }
-      ]
-    },
-    {
-      "id": "komercni-banka",
-      "name": "Komerční banka",
-      "logo": "/banks/kb-logo.svg",
-      "website": "https://www.kb.cz",
-      "rates": [
-        {
-          "fixedPeriod": "1y",
-          "rate": 5.4,
-          "apr": 5.7,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "3y",
-          "rate": 5.2,
-          "apr": 5.5,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "5y",
-          "rate": 5.1,
-          "apr": 5.4,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "10y",
-          "rate": 5.3,
-          "apr": 5.6,
-          "lastUpdated": "2025-10-08"
-        }
-      ]
-    },
-    {
-      "id": "raiffeisenbank",
-      "name": "Raiffeisenbank",
-      "logo": "/banks/rb-logo.svg",
-      "website": "https://www.rb.cz",
-      "rates": [
-        {
-          "fixedPeriod": "1y",
-          "rate": 5.1,
-          "apr": 5.4,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "3y",
-          "rate": 4.9,
-          "apr": 5.2,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "5y",
-          "rate": 4.8,
-          "apr": 5.1,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "10y",
-          "rate": 5.0,
-          "apr": 5.3,
-          "lastUpdated": "2025-10-08"
-        }
-      ]
-    },
-    {
-      "id": "moneta",
-      "name": "MONETA Money Bank",
-      "logo": "/banks/moneta-logo.svg",
-      "website": "https://www.moneta.cz",
-      "rates": [
-        {
-          "fixedPeriod": "1y",
-          "rate": 5.5,
-          "apr": 5.8,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "3y",
-          "rate": 5.3,
-          "apr": 5.6,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "5y",
-          "rate": 5.2,
-          "apr": 5.5,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "10y",
-          "rate": 5.4,
-          "apr": 5.7,
-          "lastUpdated": "2025-10-08"
-        }
-      ]
-    },
-    {
-      "id": "unicredit",
-      "name": "UniCredit Bank",
-      "logo": "/banks/unicredit-logo.svg",
-      "website": "https://www.unicreditbank.cz",
-      "rates": [
-        {
-          "fixedPeriod": "1y",
-          "rate": 5.6,
-          "apr": 5.9,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "3y",
-          "rate": 5.4,
-          "apr": 5.7,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "5y",
-          "rate": 5.3,
-          "apr": 5.6,
-          "lastUpdated": "2025-10-08"
-        },
-        {
-          "fixedPeriod": "10y",
-          "rate": 5.5,
-          "apr": 5.8,
-          "lastUpdated": "2025-10-08"
-        }
-      ]
-    }
-  ],
-  "averageRates": {
-    "1y": 5.35,
-    "3y": 5.15,
-    "5y": 5.05,
-    "10y": 5.25
+[
+  {
+    "bank": "Česká spořitelna",
+    "fixed_periods": [
+      { "term": "1y", "rate": 5.19 },
+      { "term": "2y", "rate": 4.69 },
+      { "term": "3y", "rate": 4.59 },
+      { "term": "4y", "rate": 4.59 },
+      { "term": "5y", "rate": 4.59 },
+      { "term": "8y", "rate": 4.69 },
+      { "term": "10y", "rate": 4.79 },
+      { "term": "15y", "rate": 4.89 },
+      { "term": "20y", "rate": 4.99 }
+    ],
+    "conditions": "LTV 0-80%, se slevami: účet u ČS (-0,5%), PPI (-0,1%), Hypotéka pro budoucnost (-0,1%)",
+    "last_updated": "2025-10-08",
+    "source": "Sazby platné od 5. června 2025"
   },
-  "notes": "Sample data for MVP. Will be replaced by actual scraping."
-}
-
-
+  {
+    "bank": "ČSOB",
+    "fixed_periods": [
+      { "term": "1y", "rate": 4.89 },
+      { "term": "2y", "rate": 4.49 },
+      { "term": "3y", "rate": 4.49 },
+      { "term": "4y", "rate": 4.79 },
+      { "term": "5y", "rate": 4.79 },
+      { "term": "7y", "rate": 4.99 },
+      { "term": "10y", "rate": 5.09 }
+    ],
+    "conditions": "LTV do 70%, se slevou 0,3% pro aktivní klienty, další sleva 0,3% za PENB A/B",
+    "last_updated": "2025-10-08",
+    "source": "Aktualizováno duben 2025"
+  },
+  {
+    "bank": "Komerční banka",
+    "fixed_periods": [
+      { "term": "1y", "rate": 4.99 },
+      { "term": "2y", "rate": 4.59 },
+      { "term": "3y", "rate": 4.59 },
+      { "term": "4y", "rate": 4.69 },
+      { "term": "5y", "rate": 4.69 },
+      { "term": "7y", "rate": 4.89 },
+      { "term": "10y", "rate": 5.09 }
+    ],
+    "conditions": "LTV do 80%, vyžaduje směrování příjmů do KB, pojištění u KB Pojišťovny, PENB A/B",
+    "last_updated": "2025-10-08",
+    "source": "Sazby aktualizovány duben 2025, refinancování od 4,29%"
+  },
+  {
+    "bank": "Raiffeisenbank",
+    "fixed_periods": [
+      { "term": "1y", "rate": 5.39 },
+      { "term": "2y", "rate": 4.99 },
+      { "term": "3y", "rate": 4.89 },
+      { "term": "4y", "rate": 4.89 },
+      { "term": "5y", "rate": 4.89 },
+      { "term": "7y", "rate": 5.09 },
+      { "term": "10y", "rate": 5.29 },
+      { "term": "15y", "rate": 5.49 }
+    ],
+    "conditions": "LTV do 90%, sleva 0,1% za Odpovědnou hypotéku (energie A/B), až 30% volné použití",
+    "last_updated": "2025-10-08",
+    "source": "Odhad založený na aktualizovaných informacích červen 2024"
+  },
+  {
+    "bank": "MONETA Money Bank",
+    "fixed_periods": [
+      { "term": "1y", "rate": 4.79 },
+      { "term": "2y", "rate": 4.29 },
+      { "term": "3y", "rate": 3.99 },
+      { "term": "4y", "rate": 4.19 },
+      { "term": "5y", "rate": 3.99 },
+      { "term": "7y", "rate": 4.29 },
+      { "term": "10y", "rate": 4.49 }
+    ],
+    "conditions": "LTV do 80%, s PPI (Pojištění schopnosti splácet), sleva 0,5% za aktivní účet",
+    "last_updated": "2025-10-08",
+    "source": "Sazby platné od března 2025, aktualizováno říjen 2025"
+  },
+  {
+    "bank": "UniCredit Bank",
+    "fixed_periods": [
+      { "term": "1y", "rate": 4.89 },
+      { "term": "2y", "rate": 4.49 },
+      { "term": "3y", "rate": 4.49 },
+      { "term": "4y", "rate": 4.69 },
+      { "term": "5y", "rate": 4.69 },
+      { "term": "7y", "rate": 4.89 },
+      { "term": "10y", "rate": 5.09 }
+    ],
+    "conditions": "LTV do 80% (90% pro mladé do 36 let), s aktivním účtem a PPI, další -0,1% s PENB A/B",
+    "last_updated": "2025-10-08",
+    "source": "Sazby platné od dubna 2025"
+  }
+]
